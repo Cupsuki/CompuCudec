@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CompuCudecJobs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	<style>
+		form {
+			margin: 50px auto;
+			width: 60%;
+			font-size: 18px;
+			font-family: Arial, sans-serif;
+			padding: 20px;
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #ccc;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type=text], input[type=email], textarea {
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 100%;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 18px;
+			font-family: Arial, sans-serif;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">CompuCudecJob</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Features</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Dropdown link
+				</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="#">Action</a></li>
+				  <li><a class="dropdown-item" href="#">Another action</a></li>
+				  <li><a class="dropdown-item" href="#">Something else here</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	<form>
+		<label for="matricula">Matricula:</label> 
+		<input type="text" id="id_matricula" name="matricula" required>
+
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre" required>
+
+		<label for="fecha">Fecha de Nacimiento:</label>
+		<input id="fecha" type="date" onclick="this.value = '2023-01-01';"/><br>
+	           <br>
+		<label for="foto">Foto:</label>
+			   <center>
+				<form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+					<input type="file" name="imagen1" /> 
+					<br>
+	                  
+	
+			   </center>
+		<label for="email">Correo electrónico:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="telefono">Teléfono:</label>
+		<input type="text" id="telefono" name="telefono" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <select name=" optionlist " onChange="combo">
+			<option value="no">Estados de Mexico</option>
+			<option value="Aguascalientes">Aguascalientes</option>
+			<option value="Baja California">Baja California</option>
+			<option value="Baja California Sur">Baja California Sur</option>
+			<option value="Campeche">Campeche</option>
+			<option value="Chiapas">Chiapas</option>
+			<option value="Chihuahua">Chihuahua</option>
+			<option value="CDMX">Ciudad de México</option>
+			<option value="Coahuila">Coahuila</option>
+			<option value="Colima">Colima</option>
+			<option value="Durango">Durango</option>
+			<option value="Estado de México">Estado de México</option>
+			<option value="Guanajuato">Guanajuato</option>
+			<option value="Guerrero">Guerrero</option>
+			<option value="Hidalgo">Hidalgo</option>
+			<option value="Jalisco">Jalisco</option>
+			<option value="Michoacán">Michoacán</option>
+			<option value="Morelos">Morelos</option>
+			<option value="Nayarit">Nayarit</option>
+			<option value="Nuevo León">Nuevo León</option>
+			<option value="Oaxaca">Oaxaca</option>
+			<option value="Puebla">Puebla</option>
+			<option value="Querétaro">Querétaro</option>
+			<option value="Quintana Roo">Quintana Roo</option>
+			<option value="San Luis Potosí">San Luis Potosí</option>
+			<option value="Sinaloa">Sinaloa</option>
+			<option value="Sonora">Sonora</option>
+			<option value="Tabasco">Tabasco</option>
+			<option value="Tamaulipas">Tamaulipas</option>
+			<option value="Tlaxcala">Tlaxcala</option>
+			<option value="Veracruz">Veracruz</option>
+			<option value="Yucatán">Yucatán</option>
+			<option value="Zacatecas">Zacatecas</option>
+        </select>
+		<label for="domicilio">Domicilio completo:</label>
+		<textarea id="domicilio" name="domicilio" rows="3"></textarea>
+
+		<label for="escuela">Escuela:</label>
+		<textarea id="escuela" name="escuela" rows="1"></textarea>
+
+		<label for="titulo">Titulo de la carrera :</label>
+		<textarea id="titulo" name="titulo" rows="1"></textarea>
+
+
+		<label for="experiencia">Experiencia laboral:</label>
+		<textarea id="experiencia" name="experiencia" rows="7"></textarea>
+
+		
+		<label for="horarios">Elige el horario que te gustaria labrorar :</label>
+			<select id="horarios">
+				<option value="am">Matutino de 9:00 a 18:00 AM </option>
+				<option value="pm">Vespertino de 18:00 a 00:00 PM</option>
+			</select>
+			<br>
+			<label for="red">En donde encontraste el trabajo</label>
+			<select id="red">
+				<option value="FACE">Facebook</option>
+				<option value="REDD">Reddit</option>
+				<option value="TW">TWITTER</option>
+				<option value="LINK">LINKEDID</option>
+				<option value="COMPT">COMPUTRABAJO</option>
+			  </select>
+
+		<label for="disp_viaje">Estas dispuesto a viajar internacionalmente:</label>
+			<select id="disp_viaje">
+				<option value="YES">SI</option>
+				<option value="NO">NO</option>
+				<option value="POS">DEPENDE LAS CIRCUSTANCIAS</option>
+			</select>
+
+			<label for="disp_local">Estas dispuesto a viajar nacionalmente:</label>
+			<select id="disp_local">
+				<option value="YES2">SI</option>
+				<option value="NO2">NO</option>
+				<option value="POS2">DEPENDE LAS CIRCUSTANCIAS</option>
+			</select>
+
+		<label for="idiomas">Segundo Idioma que dominas:</label>
+			<select id="idioma">
+				<option value="en">Ingles</option>
+				<option value="esp">Español</option>
+				<option value="fra">Frances</option>
+				<option value="zh">Chino</option>
+				<option value="pt">Portugués</option>
+			  </select>
+
+		<center>
+			<input type="submit" value="Enviar">
+		</center>
+		
+	</form>
+	</form>
+</body>
+</html>
